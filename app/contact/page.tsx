@@ -6,8 +6,9 @@ const email = "paulinelaurice246@gmail.com";
 const location = "#60 Europe St. Hillside Subd., Buhangin Pob, Davao City";
 
 const socials = [
-  { name: "GitHub", href: "#" },
-  { name: "Facebook", href: "#"},
+  { name: "GitHub", href: "https://github.com/PS24-design" },
+  { name: "Figma", href: "https://www.figma.com/files/team/1632755429972627439/user/1632755428526371310?fuid=1632755428526371310" },
+  { name: "Facebook", href: "https://www.facebook.com/paulinelaurice.sales"},
 ];
 
 const icon = {
@@ -63,7 +64,6 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <p className="elsewhere mono-label dim">OTHER SOCIALS</p>
         <div className="pills">
           {socials.map((s) => (
             <a key={s.name} href={s.href} className="pill">

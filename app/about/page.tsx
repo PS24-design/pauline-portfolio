@@ -5,8 +5,6 @@ const portrait = "/icons/about_me_profile.jpeg";
 const intro =
   "I am a BSIT student who turns ideas into websites. I care about clean layouts, clear stories and details, from first sketch to final launch.";
 
-const tags = ["Natural Language Programming", "UI / UX", "Web development"];
-
 export default function AboutPage() {
   return (
     <Shell active="about" label="ABOUT ME" meta="PROFILE / CREATIVE PRACTICE">
@@ -27,36 +25,30 @@ export default function AboutPage() {
             </div>
             <p>
               {intro}
-              <span className="cursor" />
+              <span className="cursor small" />
             </p>
           </div>
 
           <dl className="facts">
             <div>
-              <dt className="mono-label dim">BASED</dt>
+              <dt className="mono-label">BASED</dt>
               <dd>Davao City</dd>
             </div>
             <div>
-              <dt className="mono-label dim">FOCUS</dt>
-              <dd>Design &amp; NLP </dd>
+              <dt className="mono-label">FOCUS</dt>
+              <dd>Design &amp; NLP</dd>
             </div>
           </dl>
 
-          <ul className="tags">
-            {tags.map((t) => (
-              <li key={t}>{t}</li>
-            ))}
-          </ul>
+          <a href="/Pauline_Sales_CV.pdf" download className="btn-accent">
+            Download CV ↓
+          </a>
         </div>
 
         <div className="portrait">
-          {portrait ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={portrait} alt="Portrait of Pauline" />
-          ) : (
-            <span className="media-text">Portrait (sample only)</span>
-          )}
-          <span className="mono-label dim portrait-tag">PORTRAIT / 2026</span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={portrait} alt="Pauline Sales" />
+          <span className="mono-label portrait-tag">PORTRAIT / 2026</span>
         </div>
       </section>
     </Shell>

@@ -7,7 +7,7 @@ const projects = [
     desc: "This current project that you're viewing is my first website.",
     role: "Design, development",
     tools: "Figma, Next.js",
-    image: "",
+    image: "/works/portfolio.jpg",
     href: "#",
   },
   {
@@ -16,7 +16,7 @@ const projects = [
     desc: "An App Blocker that I tried to create assisted by AI. This app is still being created.",
     role: "UI design, front-end",
     tools: "Figma, Android Studio",
-    image: "",
+    image: "/works/lock_in.jpg",
     href: "#",
   },
 ];
@@ -25,7 +25,7 @@ const tags = ["Interface", "Editorial", "Digital"];
 
 export default function ProjectsPage() {
   return (
-    <Shell active="projects" label="MY WORKS" meta="selected works only kay pangit akoang mga prev. works :)">
+    <Shell active="works" label="MY WORKS" meta="selected works only kay pangit akoang mga prev. works :)">
       <section className="proj-head">
         <div>
           <p className="eyebrow">
