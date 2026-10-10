@@ -27,7 +27,9 @@ export default function ContactPage() {
     <Shell active="contact" label="CONTACT ME" meta="OPEN FOR SELECT COLLABORATIONS">
       <section className="contact">
         <div className="avatar-wrap">
-          <div className="contact-avatar">PS</div>
+          <div className="contact-avatar">
+            <img src="/icons/contact_icon.jpg" alt="Pauline" />
+          </div>
           <span className="status-dot" />
         </div>
 

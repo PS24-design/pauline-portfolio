@@ -13,7 +13,7 @@ const projects = [
   {
     title: "LOCK IN App",
     type: "PROJECT #2",
-    desc: "An App Blocker that I tried to create assisted by AI. This app is still being created.",
+    desc: "An App Blocker for productivity that I tried to create assisted by AI. This app is still being created.",
     role: "UI design, front-end",
     tools: "Figma, Android Studio",
     image: "/works/lock_in.jpg",
