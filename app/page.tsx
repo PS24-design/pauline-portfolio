@@ -8,7 +8,6 @@ const profile = {
   tagline: "Turning ideas into websites",
 };
 
-// Use the same icon paths as in your app/menu/page.tsx
 const options = [
   {
     title: "About me",

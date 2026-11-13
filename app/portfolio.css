@@ -635,6 +635,8 @@
   bottom: -10%;
   height: 120%;
   width: 75%;
+  object-fit: cover;
+  object-position: right center;
   display: block;
   -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.6) 25%, #000 55%);
   mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.6) 25%, #000 55%);
@@ -820,3 +822,197 @@ main.screen.home {
     animation: none;
   }
 }
+
+/* =====================================================================
+  Adaptive layout: laptops, tablets, phones, portrait and landscape
+   ===================================================================== */
+
+/* Use the real visible height on phones (the browser address bar changes it) */
+
+.screen,
+.shell {
+  min-height: 100vh; /* fallback for older browsers */
+  min-height: 100dvh;
+}
+
+/* ---------- Very large screens: scale everything up a little ---------- */
+@media (min-width: 1800px) {
+  html {
+    font-size: 112.5%;
+  }
+}
+
+/* ---------- Small laptops and tablets (landscape) ---------- */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .shell {
+    grid-template-columns: 240px 1fr;
+  }
+
+  .main-top,
+  .main-body {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .home-options {
+    max-width: min(980px, 70vw);
+  }
+}
+
+/* ---------- Phones (portrait) ---------- */
+@media (max-width: 600px) {
+  /* Home */
+  .screen {
+    padding: 20px 20px 32px;
+  }
+
+  .hero-name {
+    font-size: clamp(2.6rem, 14vw, 3.6rem);
+  }
+
+  .hero-role {
+    font-size: 1.25rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.05rem;
+  }
+
+  .home .hero-body {
+    margin-top: 28px;
+  }
+
+  /* photo fills the screen behind the text, faded */
+  .hero-photo img {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    object-fit: cover;
+    object-position: 70% center;
+  }
+
+  .home-options {
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .home-option {
+    padding: 16px;
+    gap: 6px;
+  }
+
+  .home-option img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .home-option h2 {
+    font-size: 1.1rem;
+  }
+
+  .home-option p {
+    font-size: 0.9rem;
+  }
+
+  /* About / Works / Contact */
+  .side {
+    padding: 18px 16px;
+    gap: 14px;
+  }
+
+  .side-link {
+    padding: 10px 12px;
+  }
+
+  .main-top {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 16px 20px;
+  }
+
+  .main-body {
+    padding: 28px 20px;
+  }
+
+  .display,
+  .about .display {
+    font-size: clamp(2rem, 10vw, 2.8rem);
+  }
+
+  .terminal {
+    padding: 16px 18px;
+  }
+
+  .terminal p {
+    font-size: 0.92rem;
+  }
+
+  .facts {
+    flex-wrap: wrap;
+    gap: 28px;
+  }
+
+  .project {
+    gap: 20px;
+    padding: 28px 0;
+  }
+
+  .meta-row {
+    grid-template-columns: 60px 1fr;
+  }
+
+  .contact-avatar {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* ---------- Phones and small tablets turned sideways (landscape) ---------- */
+@media (orientation: landscape) and (max-height: 520px) {
+  .screen {
+    padding: 16px 28px;
+  }
+
+  .hero-name {
+    font-size: clamp(2.4rem, 9vh, 3.4rem);
+  }
+
+  .hero-role {
+    font-size: 1.1rem;
+  }
+
+  .hero-tagline {
+    font-size: 0.95rem;
+  }
+
+  .home .hero-body {
+    margin-top: 12px;
+  }
+
+  /* keep the three tiles in one row, shorter */
+  .home-options {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 80vw;
+    margin-top: 16px;
+    gap: 10px;
+  }
+
+  .home-option {
+    padding: 12px;
+  }
+
+  .home-option img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .home-option p {
+    display: none;
+  }
+
+  /* sidebar scrolls on its own if the screen is too short */
+  .side {
+    overflow-y: auto;
+  }
+}
+
