@@ -470,6 +470,16 @@
   filter: brightness(1.1);
 }
 
+.btn-accent {
+  width: fit-content;
+  justify-self: start;
+  align-self: start;
+}
+
+.project-info .btn-accent {
+  padding: 9px 16px;
+}
+
 /* ---------- Contact ---------- */
 
 .contact {

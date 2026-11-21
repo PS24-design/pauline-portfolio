@@ -11,7 +11,7 @@ const profile = {
 const options = [
   {
     title: "About me",
-    info: "My work psreferences",
+    info: "My work preferences",
     icon: "/icons/about_me.png",
     href: "/about",
   },

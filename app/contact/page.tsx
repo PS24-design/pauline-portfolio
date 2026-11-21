@@ -3,7 +3,7 @@ import Shell from "../components/Shell";
 // Edit your real details here.
 const phone = "+63 9948947714";
 const email = "paulinelaurice246@gmail.com";
-const location = "#60 Europe St. Hillside Subd., Buhangin Pob, Davao City";
+const location = "Davao City";
 
 const socials = [
   { name: "GitHub", href: "https://github.com/PS24-design" },

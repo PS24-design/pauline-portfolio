@@ -8,7 +8,7 @@ const projects = [
     role: "Design, development",
     tools: "Figma, Next.js",
     image: "/works/portfolio.jpg",
-    href: "#",
+    href: "https://github.com/PS24-design/pauline-portfolio.git",
   },
   {
     title: "LOCK IN App",
@@ -17,7 +17,7 @@ const projects = [
     role: "UI design, front-end",
     tools: "Figma, Android Studio",
     image: "/works/lock_in.jpg",
-    href: "#",
+    href: "https://github.com/PS24-design/lock_in_app.git",
   },
 ];
 
@@ -49,7 +49,7 @@ export default function ProjectsPage() {
         <article key={p.title} className={`project${i % 2 === 1 ? " reverse" : ""}`}>
           <div className="media">
             {p.image ? (
-              // eslint-disable-next-line @next/next/no-img-element
+              
               <img src={p.image} alt={p.title} />
             ) : (
               <span className="media-text">Picture {i + 1} (sample only)</span>
@@ -73,6 +73,18 @@ export default function ProjectsPage() {
                 <span>{p.tools}</span>
               </div>
             </div>           
+
+            {p.href !== "#" && (
+              <a
+                href={p.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-accent"
+              >
+                View on GitHub ↗
+              </a>
+            )}
+            
           </div>
         </article>
       ))}
